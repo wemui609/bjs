@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+</head>
+<body>
+	<h1 id="populateString"></h1>
+
+	<hr>
+
+	<label>add this:<br>
+		<input type="text" id="no1">
+	</label><br><br>
+	<label>to this: <br>
+		<input type="text" id="no2">
+	</label></br></br>
+	<button onclick="addition()">Click to add</button></br></br>
+	<label>Result: <span id="result"></span></label>
+	<hr>
+
+	<div onclick="change()" id="changeThisText">CHANGE ME</div>
+
+	<hr>
+
+	<div class="foo boo too" id="loadedLink"><a href="http://www.w3schools.com/jsref/dom_obj_all.asp">Full List of Dom calls</a></div>
+	<div id="cloned"></div>
+
+	<hr>
+	<script type="text/javascript" src= "calc.js"></script>
+	<script type="text/javascript">
+		//alert('hello world');
+		
+		/*this
+		its
+		a multiline commet*/
+
+		console.log('its oct 12th');
+		document.write('Hola<br><hr>');
+		document.getElementById('populateString').innerHTML ="JS Cheat Sheet";
+
+		//this variable is a number
+		var x = 40;
+		document.write('<p>addition</p>');
+		document.write(x + 12);
+		document.write('<p>subtract</p>');
+		document.write(x - 12);
+		document.write('<p>multiply</p>');
+		document.write(x * 12);
+		document.write('<p>divide</p>');
+		document.write(x / 12);
+		document.write('<p>modulus</p>');
+		document.write(x % 12);
+		document.write('<p>Var x still =</p>');
+		document.write(x);
+
+		//increments and decrements
+		document.write('<br><hr><p>Increment</p>');
+		document.write(++x);
+		document.write('<br><hr><p>Decrement</p>');
+		document.write(--x);
+		document.write('<br><hr><p>Increment after statement runs</p>');
+		document.write(x++);
+		document.write('<br><hr><p>Decrement after statement runs</p>');
+		document.write(x-- + "<br>");
+		document.write(x + "<br><hr>");
+
+		//assignment Operators
+		var y = 10;
+		document.write("<p>x = x + y</p>");
+		document.write(x = x + y);
+		document.write('<br>');
+		document.write("<p>x = x - y</p>");
+		document.write(x = x - y);
+		document.write('<br>');
+		document.write("<p>x = x * y</p>");
+		document.write(x = x * y);
+		document.write('<br>');
+		document.write("<p>x = x / y</p>");
+		document.write(x = x / y);
+		document.write('<br>');
+		document.write("<p>x = x % y</p>");
+		document.write(x = x % y);
+		document.write('<br>');
+		document.write("<p>x = y</p>");
+		document.write(x = y);
+		document.write('<br>');
+
+		//add astring to a number
+		var z = "1";
+		var a = "2";
+		document.write("<p>add a number to a string</p>");
+		document.write(x + z);
+		document.write('<br>');
+		document.write("<p>add a string to a string</p>");
+		document.write(a + z);
+		document.write('<br>');
+
+		//strings
+		var m = "Marco";
+		var p = "Polo";
+		document.write("<p>String Concatination</p>");
+		document.write(m + ' ' + p);
+		document.write('<br>');
+		document.write("<p>or use concat</p>");
+		document.write(m.concat(' ',p));
+		document.write('<br>');
+		document.write("<p>or update the string</p>");
+		m += p;
+		document.write(m);
+		document.write('<br>');
+
+		//string properties
+		document.write("<p>escaping characters</p>");
+		document.write('\' \" \\ \n \r \t');
+		document.write('<br>');
+
+		var longStr = "The quick brown fox jumps over the lazy dog";
+		document.write("<p>This is a string</p>");
+		document.write(longStr);
+		document.write('<br>');
+		document.write("<p>Count the length of this string</p>");
+		document.write(longStr.length);
+		document.write('<br>');
+		document.write("<p>index of 'fox'</p>");
+		document.write(longStr.indexOf('fox'));
+		document.write('<br>');
+		document.write("<p>index of 'fox' using search</p>");
+		document.write(longStr.search('fox'));
+		document.write('<br>');
+		document.write("<p>Last index of 'o'</p>");
+		document.write(longStr.lastIndexOf('o'));
+		document.write('<br>');
+		document.write("<p>Last index of 'zorro'</p>");
+		document.write(longStr.lastIndexOf('zorro'));
+		document.write('<br>');
+		document.write("<p>Return character with index of 4</p>");
+		document.write(longStr.charAt(4));
+		document.write('<br>');
+		document.write("<p>Check is string ends with '.'</p>");
+		document.write(longStr.endsWith('.'));
+		document.write('<br>');
+		document.write("<p>repeat strings</p>");
+		document.write(longStr.repeat(3));
+		document.write('<br>');
+		document.write("<p>trim string</p>");
+		document.write(" needs trim ".trim());
+		document.write('<br>');
+
+		//extracting strings
+		document.write("<p>slice dog</p>");
+		document.write(longStr.slice(30));
+		document.write('<br>');
+		document.write("<p>slice the dog from right</p>");
+		document.write(longStr.slice(-3));
+		document.write('<br>');
+
+		document.write("<p>substring dog</p>");
+		longStr3 = longStr.substring(39)
+		document.write(longStr3);
+		document.write('<br>');
+		document.write("<p>subtr dog from right</p>");
+		document.write(longStr.substr(-3, 3));
+		document.write('<br>');
+
+		//editting strings
+		document.write("<p>replace content</p>");
+		document.write(longStr.replace('fox', 'zorro'));
+		document.write('<br>');
+
+		document.write("<p>replace 'o' with 'a'</p>");
+		document.write(longStr.replace(/o/g, 'a'));
+		document.write('<br>');
+		document.write(longStr);
+
+		document.write("<p>UpperCase</p>");
+		document.write(longStr.toUpperCase());
+		document.write('<br>');
+		document.write("<p>LowerCase</p>");
+		document.write(longStr.toLowerCase());
+		document.write('<br>');
+
+		//convert string to array
+		document.write("<p>convert to array</p>");
+		document.write(longStr.split(' '));
+		console.log(longStr.split(' '));
+		document.write('<br>');
+
+
+
+
+
+
+
+
+
+	
+	</script>
+</body>
+</html/>
